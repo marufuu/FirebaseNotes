@@ -53,6 +53,9 @@ struct LoginView: View {
         }
     }
     
+    
+    
+    
     func login() {
         AuthService.shared.login(email: email, password: password) { result in
             switch result {
