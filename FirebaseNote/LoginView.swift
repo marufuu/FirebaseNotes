@@ -42,7 +42,6 @@ struct LoginView: View {
                     SignupView()
                 }
                 
-                
                 if !errorMessage.isEmpty {
                     Text(errorMessage)
                         .foregroundColor(.red)
