@@ -48,7 +48,7 @@ An iOS app that lets users:
 
 **iOS Engineer** with 7+ years of experience
 
-[GitHub](https://github.com/marufuu) | [LinkedIn](https://linkedin.com/in/maruf)
+[GitHub](https://github.com/marufuu) | [LinkedIn](https://www.linkedin.com/in/abdullah-al-maruf-7b1964174/)
 
 ---
 
