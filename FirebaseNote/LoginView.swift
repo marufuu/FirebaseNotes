@@ -57,10 +57,10 @@ struct LoginView: View {
         AuthService.shared.login(email: email, password: password) { result in
             switch result {
             case .success(let user):
-                print("Logged in: \(user.uid)")
+                print("FN: Logged in: \(user.uid)")
             case .failure(let error):
                 errorMessage = error.localizedDescription
-                print("abc: Login failed: \(error.localizedDescription)")
+                print("FN: Login failed: \(errorMessage)")
             }
         }
     }

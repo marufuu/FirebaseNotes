@@ -29,6 +29,7 @@ struct RootView: View {
     func listenToAuthState() {
         Auth.auth().addStateDidChangeListener { _, user in
             self.user = user
+            print("FN:listenToAuthState: called")
         }
     }
 }

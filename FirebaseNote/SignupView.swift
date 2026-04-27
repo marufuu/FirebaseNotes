@@ -54,15 +54,17 @@ struct SignupView: View {
         AuthService.shared.signup(email: email, password: password) { result in
             switch result {
             case .success(let user):
-                print("User created: \(user.uid)")
+                print("FN: User created: \(user.uid)")
                 
             case .failure(let error):
                 
                 if let err = error as NSError?,
                    err.code == AuthErrorCode.emailAlreadyInUse.rawValue {
                     errorMessage = "This email is already registered."
+                    print("FN: \(errorMessage)")
                 } else {
                     errorMessage = error.localizedDescription
+                    print("FN: \(errorMessage)")
                 }
             }
         }

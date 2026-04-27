@@ -9,16 +9,16 @@ import FirebaseAuth
 
 class AuthService {
     
-    static let shared = AuthService()
+    static let shared = AuthService() // One instance for the whole app
     
     private init() {}
     
     func login(email: String, password: String, completion: @escaping (Result<User, Error>) -> Void) {
         Auth.auth().signIn(withEmail: email, password: password) { result, error in
             if let error = error {
-                completion(.failure(error))
+                completion(.failure(error)) //Send failure into the closure
             } else if let user = result?.user {
-                completion(.success(user))
+                completion(.success(user)) // Send success into the closure
             }
         }
     }
