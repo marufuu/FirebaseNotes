@@ -38,8 +38,10 @@ class FirestoreService {
     
     func fetchProfile(completion: @escaping (UserProfile?) -> Void) {
         
+        // Get user UID
         guard let uid = Auth.auth().currentUser?.uid else { return }
         
+        // There users is the is the db folder of firestore where to get data
         db.collection("users").document(uid).getDocument { snapshot, error in
             
             guard let data = snapshot?.data() else {

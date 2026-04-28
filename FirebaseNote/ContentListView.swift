@@ -12,7 +12,7 @@ struct ContentListView: View {
     let collection: String
     let title: String
     
-    @State private var items: [ContentItem] = []
+    @State private var items: [ContentItem] = [] // starts empty
     
     var body: some View {
         
